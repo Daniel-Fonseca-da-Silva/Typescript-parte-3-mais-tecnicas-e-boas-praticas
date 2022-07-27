@@ -33,7 +33,7 @@ export class NegociacaoController {
             .then(res => res.json())
             .then((dados) => {
             return dados.map(dadosHoje => {
-                return new Negociacao(new Date(), dadosHoje.veze, dadosHoje.montante);
+                return new Negociacao(new Date(), dadosHoje.vezes, dadosHoje.montante);
             });
         }).then(negociacoesHoje => {
             for (let negocicao of negociacoesHoje) {
